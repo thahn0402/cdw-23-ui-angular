@@ -13,9 +13,9 @@ export class HeaderComponent implements OnInit {
     private userAuthService: UserAuthService,
     private router: Router,
     public userService: UserService
-  ) {}
+  ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   public isLoggedIn() {
     return this.userAuthService.isLoggedIn();
@@ -23,7 +23,13 @@ export class HeaderComponent implements OnInit {
 
   public logout() {
     this.userAuthService.clear();
-    this.router.navigate(['/home']);
+    this.router.navigate(['/']);
   }
 
+  public isAdmin() {
+    return this.userAuthService.isAdmin();
+  }
+  public isUser() {
+    return this.userAuthService.isUser();
+  }
 }

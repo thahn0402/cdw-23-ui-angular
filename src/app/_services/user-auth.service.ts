@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class UserAuthService {
-  constructor() {}
+  constructor() { }
 
   public setRoles(roles: []) {
     localStorage.setItem('roles', JSON.stringify(roles));
@@ -28,5 +28,14 @@ export class UserAuthService {
 
   public isLoggedIn() {
     return this.getRoles() && this.getToken();
+  }
+
+  public isAdmin() {
+    const roles: any[] = this.getRoles();
+    return roles[0].roleName === "Admin";
+  }
+  public isUser() {
+    const roles: any[] = this.getRoles();
+    return roles[0].roleName === "User";
   }
 }
