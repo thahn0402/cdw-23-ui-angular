@@ -19,10 +19,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { AddNewProductComponent } from './add-new-product/add-new-product.component'
-
+import { MatGridListModule } from '@angular/material/grid-list';
+import { DragDirective } from './drag.directive';
+import { ShowProductDetailsComponent } from './show-product-details/show-product-details.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ShowProductImagesDialogComponent } from './show-product-images-dialog/show-product-images-dialog.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +38,10 @@ import { AddNewProductComponent } from './add-new-product/add-new-product.compon
     LoginComponent,
     HeaderComponent,
     ForbiddenComponent,
-    AddNewProductComponent
+    AddNewProductComponent,
+    DragDirective,
+    ShowProductDetailsComponent,
+    ShowProductImagesDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +54,10 @@ import { AddNewProductComponent } from './add-new-product/add-new-product.compon
     MatButtonModule,
     MatIconModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatGridListModule,
+    MatTableModule,
+    MatDialogModule
   ],
   providers: [
     AuthGuard,
