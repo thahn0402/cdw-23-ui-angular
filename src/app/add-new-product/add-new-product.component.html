@@ -29,7 +29,10 @@
 
                     <div align="end">
                         <button mat-stroked-button color="primary" style="margin-right: 3px;">Hủy</button>
-                        <button type="submit" mat-stroked-button color="primary">Thêm sản phẩm</button>
+                        <button type="submit" *ngIf="isNewProduct" mat-stroked-button color="primary">Thêm sản
+                            phẩm</button>
+                        <button type="submit" *ngIf="!isNewProduct" mat-stroked-button color="primary">Sửa sản
+                            phẩm</button>
                     </div>
                 </form>
             </div>
@@ -39,8 +42,8 @@
                     <div class="dropzone" appDrag (files)="fileDropped($event)">
                         <div class="text-wrapper">
                             <div class="centered">
-                                Drag and drop your file or
-                                <a (click)="selectFile.click()" class="browse-button">browse</a> a file
+                                Kéo và thả hình ảnh của bạn tại đây hoặc
+                                <a (click)="selectFile.click()" class="browse-button">tìm kiếm</a> hình ảnh
                             </div>
 
                         </div>
