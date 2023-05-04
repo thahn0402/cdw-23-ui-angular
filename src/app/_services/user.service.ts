@@ -12,7 +12,11 @@ export class UserService {
   constructor(
     private httpclient: HttpClient,
     private userAuthService: UserAuthService
-  ) {}
+  ) { }
+
+  public register(registerData) {
+    return this.httpclient.post(this.PATH_OF_API + '/registerNewUser', registerData);
+  }
 
   public login(loginData) {
     return this.httpclient.post(this.PATH_OF_API + '/authenticate', loginData, {
