@@ -1,10 +1,17 @@
 <div class="container mt-5">
+
+   <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Tìm kiếm</mat-label>
+      <input name="searchKey" id="searchKey" matInput #searchkeyword (keyup)="searchByKeyWord(searchkeyword.value)"
+         placeholder="Tìm kiếm">
+   </mat-form-field>
+
    <mat-grid-list cols="4" rowHeight="2:3" gutterSize="10">
       <mat-grid-tile *ngFor="let p of productDetails">
          <div class="row p-5">
             <div class="image-container">
                <img class="home-page-product-image" [src]="p.productImages[0].url">
-            </div>           
+            </div>
 
             <div class="mt-3">
                <p><b>{{p.productName}}</b></p>
@@ -21,7 +28,8 @@
             </div>
 
             <div class="mt-2">
-               <button type="button" mat-raised-button color="warn" (click)="showProductDetails(p.productId)">Xem chi tiết</button>
+               <button type="button" mat-raised-button color="warn" (click)="showProductDetails(p.productId)">Xem chi
+                  tiết</button>
             </div>
          </div>
       </mat-grid-tile>

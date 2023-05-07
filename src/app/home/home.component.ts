@@ -27,15 +27,15 @@ export class HomeComponent implements OnInit {
     this.getAllProducts();
   }
 
-  public getAllProducts() {
-    this.productService.getAllProducts(this.pageNumber)
+  public getAllProducts(searchKey: string ="") {
+    this.productService.getAllProducts(this.pageNumber, searchKey)
       .pipe(
         map((x: Product[], i) => x.map((product: Product) => this.imageProcessingService.createImages(product)))
       )
       .subscribe(
         (response: Product[]) => {
           console.log(response);
-          if (response.length == 2) {
+          if (response.length == 12) {
             this.showLoadButton = true;
           } else {
             this.showLoadButton = false;
@@ -54,5 +54,12 @@ export class HomeComponent implements OnInit {
 
   showProductDetails(productId) {
     this.router.navigate(['/productViewDetails', { productId: productId }])
+  }
+
+  searchByKeyWord(searchkeyword) {
+    console.log(searchkeyword);
+    this.pageNumber = 0;
+    this.productDetails = [];
+    this.getAllProducts(searchkeyword);
   }
 }
