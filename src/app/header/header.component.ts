@@ -29,6 +29,7 @@ export class HeaderComponent implements OnInit {
   public isAdmin() {
     return this.userAuthService.isAdmin();
   }
+
   public isUser() {
     return this.userAuthService.isUser();
   }

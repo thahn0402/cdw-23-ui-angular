@@ -10,6 +10,7 @@
 
 <mat-toolbar color="primary" *ngIf="isLoggedIn()">
   <button mat-raised-button routerLink="/">Trang chủ</button>
+  <button *ngIf="isUser()" mat-raised-button routerLink="/cart">Giỏ hàng</button>
   <button *ngIf="isAdmin()" mat-raised-button routerLink="/addNewProduct">Thêm sản phẩm</button>
   <button *ngIf="isAdmin()" mat-raised-button routerLink="/showProductDetails">Sản phẩm</button>
 </mat-toolbar>
