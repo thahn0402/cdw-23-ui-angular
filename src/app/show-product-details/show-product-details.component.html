@@ -9,32 +9,32 @@
         <table mat-table [dataSource]="productDetails" class="mat-elevation-z8">
 
             <ng-container matColumnDef="Id">
-                <th mat-header-cell *matHeaderCellDef> ID </th>
-                <td mat-cell *matCellDef="let element"> {{element.productId}} </td>
+                <th mat-header-cell *matHeaderCellDef>ID</th>
+                <td mat-cell *matCellDef="let element">{{element.productId}}</td>
             </ng-container>
 
             <ng-container matColumnDef="name">
-                <th mat-header-cell *matHeaderCellDef> Tên sản phẩm </th>
-                <td mat-cell *matCellDef="let element"> {{element.productName}} </td>
+                <th mat-header-cell *matHeaderCellDef>Tên sản phẩm</th>
+                <td mat-cell *matCellDef="let element">{{element.productName}}</td>
             </ng-container>
 
             <ng-container matColumnDef="description">
-                <th mat-header-cell *matHeaderCellDef> Mô tả </th>
-                <td mat-cell *matCellDef="let element" style="text-align: left;"> {{element.productDescription}} </td>
+                <th mat-header-cell *matHeaderCellDef>Mô tả</th>
+                <td mat-cell *matCellDef="let element" style="text-align: left;">{{element.productDescription}}</td>
             </ng-container>
 
             <ng-container matColumnDef="actualPrice">
-                <th mat-header-cell *matHeaderCellDef> Giá </th>
-                <td mat-cell *matCellDef="let element"> {{element.productActualPrice}} </td>
+                <th mat-header-cell *matHeaderCellDef>Giá</th>
+                <td mat-cell *matCellDef="let element">{{element.productActualPrice}}</td>
             </ng-container>
 
             <ng-container matColumnDef="discountedPrice">
-                <th mat-header-cell *matHeaderCellDef> Giá đã giảm </th>
-                <td mat-cell *matCellDef="let element"> {{element.productDiscountedPrice}} </td>
+                <th mat-header-cell *matHeaderCellDef>Giá đã giảm</th>
+                <td mat-cell *matCellDef="let element">{{element.productDiscountedPrice}}</td>
             </ng-container>
 
             <ng-container matColumnDef="actions">
-                <th mat-header-cell *matHeaderCellDef> Tác vụ </th>
+                <th mat-header-cell *matHeaderCellDef>Tác vụ</th>
                 <td mat-cell *matCellDef="let element">
                     <button mat-icon-button color="primary" (click)="showImgaes(element)">
                         <mat-icon>images </mat-icon>
