@@ -31,11 +31,11 @@ export class UserAuthService {
   }
 
   public isAdmin() {
-    const roless: any[] = this.getRoles();
-    return roless[0].roleName === "Amin";
+    const roles: any[] = this.getRoles();
+    return roles[0].roleName === "Admin";
   }
   public isUser() {
-    const roless: any[] = this.getRoles();
-    return roless[0].roleName === "Uer";
+    const roles: any[] = this.getRoles();
+    return roles[0].roleName === "User";
   }
 }
