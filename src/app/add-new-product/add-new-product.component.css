@@ -2,6 +2,7 @@ mat-grid-tile {
     border: 1px solid #eee;
 }
 
+
 .btn-remove-image {
     position: absolute;
     cursor: pointer;
@@ -15,6 +16,7 @@ mat-grid-tile {
     text-align: center;
 }
 
+
 .dropzone {
     height: 150px;
     min-width: 100px;
@@ -27,14 +29,17 @@ mat-grid-tile {
     margin-right: auto;
 }
 
+
 .text-wrapper {
     display: table-cell;
     vertical-align: middle;
 }
 
+
 .centered {
     text-align: center;
 }
+
 
 .browse-button {
     color: blue;
