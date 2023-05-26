@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { UserAuthService } from '../_services/user-auth.service';
 import { UserService } from '../_services/user.service';
 
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -26,11 +27,11 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
-  public isAdmin() {
-    return this.userAuthService.isAdmin();
+  public iAdmin() {
+    return this.userAuthService.iAdmin();
   }
 
-  public isUser() {
-    return this.userAuthService.isUser();
+  public iUser() {
+    return this.userAuthService.iUser();
   }
 }
