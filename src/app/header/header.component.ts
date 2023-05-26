@@ -27,11 +27,11 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
-  public iAdmin() {
-    return this.userAuthService.iAdmin();
+  public isAdmin() {
+    return this.userAuthService.isAdmin();
   }
 
-  public iUser() {
-    return this.userAuthService.iUser();
+  public isUser() {
+    return this.userAuthService.isUser();
   }
 }
