@@ -18,13 +18,13 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  public isLoggedInn() {
-    return this.userAuthService.isLoggedInn();
+  public isLoggedIn() {
+    return this.userAuthService.isLoggedIn();
   }
 
-  public logoutt() {
+  public logout() {
     this.userAuthService.clear();
-    this.router.navigate(['//']);
+    this.router.navigate(['/']);
   }
 
   public isAdmin() {
