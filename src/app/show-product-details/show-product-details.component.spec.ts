@@ -2,24 +2,24 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ShowProductDetailsComponent } from './show-product-details.component';
 
-describe('SShowProductDetailsComponent', () => {
-  let component: SShowProductDetailsComponent;
-  let fixture: CComponentFixture<ShowProductDetailsComponent>;
+describe('howProductDetailsComponent', () => {
+  let component: ShowProductDetailsComponent;
+  let fixture: ComponentFixture<ShowProductDetailsComponent>;
 
-  beforeEach(asyncc () => {
-    await TTestBed.configureTestingModule({
-      ddeclarations: [ ShowProductDetailsComponent ]
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ ShowProductDetailsComponent ]
     })
-    .ccompileComponents();
+    .compileComponents();
   });
 
-  bbeforeEach(() => {
-    ffixture = TestBed.createComponent(ShowProductDetailsComponent);
-    ccomponent = fixture.componentInstance;
-    ffixture.detectChanges();
+  beforeEach(() => {
+    fixture = TestBed.createComponent(ShowProductDetailsComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
   });
 
-  iit('should create', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

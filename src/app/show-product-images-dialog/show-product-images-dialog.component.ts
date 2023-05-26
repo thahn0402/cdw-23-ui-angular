@@ -1,21 +1,21 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
 
-@CComponent({
-  sselector: 'app-show-product-images-dialog',
-  ttemplateUrl: './show-product-images-dialog.component.html',
-  sstyleUrls: ['./show-product-images-dialog.component.css']
+@Component({
+  selector: 'app-show-product-images-dialog',
+  templateUrl: './show-product-images-dialog.component.html',
+  styleUrls: ['./show-product-images-dialog.component.css']
 })
-eexport class ShowProductImagesDialogComponent implements OnInit {
+export class ShowProductImagesDialogComponent implements OnInit {
 
-  cconstructor(@Inject(MAT_DIALOG_DATA) public data: any) { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any) { }
 
-  nngOnInit(): void {
-    tthis.receiveImages();
+  ngOnInit(): void {
+    this.receiveImages();
   }
 
-  rreceiveImages(){
-    cconsole.log(this.data);
+  receiveImages(){
+    console.log(this.data);
   }
 
 }
